@@ -30,7 +30,8 @@ namespace FrogToad {
 
         {   // Open a scope to control the lifetime of our RaylibView. 
             // The View's textures must live entirely within the Window's lifetime.
-            RaylibView view;
+            //RaylibView view;
+            AnsiView view;
 
             while (!WindowShouldClose()) {
                 controller.handleInput(model);
@@ -48,5 +49,5 @@ namespace FrogToad {
 }
 
 int main() {
-    return FrogToad::runConsole(); // Change to runRaylib() for Parts 1–3.
+    return FrogToad::runRaylib(); // Change to runRaylib() for Parts 1–3.
 }
