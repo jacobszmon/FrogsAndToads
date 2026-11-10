@@ -13,9 +13,9 @@ namespace FrogToad {
         /** @brief Render the current model using already loaded resources. */
         void draw(const BoardModel& model) override;
         
-        /** @brief Draws a GREEN frog at the given position using Raylib Circles. */
+        /** @brief Draws a GREEN frog at the given position using Raylib Circles. Size determines the radius of the frog's body.*/
         static void DrawFrog(int posX, int posY, float size);
-        /** @brief Draws a BLUE toad at the given position using Raylib Circles. */
+        /** @brief Draws a BLUE toad at the given position using Raylib Circles. Size determines the radius of the frog's body.*/
         static void DrawToad(int posX, int posY, float size);
         /** @brief Draws a Banner with a Title and Instructions to communicate game state to the player.*/
         static void DrawBanner(const char* Title, const char* Instructions, Color TitleColor, Color InstColor);
