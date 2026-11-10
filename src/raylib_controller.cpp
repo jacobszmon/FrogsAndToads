@@ -13,6 +13,7 @@ namespace FrogToad {
 		}
 		
 		// Loop through our number key indexes (49 -> 59) and try to move the index that matches the first input.
+		// EXPLANATION: keys 0-9 occupy the above indexes.
 		for (int i{0}; i < 9; i++) {
 			if (IsKeyPressed(49+i)) {
 				model.tryMove(i);
