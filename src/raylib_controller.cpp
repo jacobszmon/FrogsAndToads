@@ -1,17 +1,20 @@
 #include "raylib_controller.hpp"
 #include <iostream>
+
+#include "board_layout.hpp"
 #include "raylib.h"
 
 namespace FrogToad {
 	void RaylibController::handleInput(BoardModel& model) {
 		// TODO (student): Implement non-blocking keyboard input.
 		
+		if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON)) {
+			model.tryMove( BoardLayout::cellAt(GetMousePosition()) );
+		}
 		
 		// Loop through our number key indexes (49 -> 59) and try to move the index that matches the first input.
-		for (int i{0}; i < 9; i++)
-		{
-			if (IsKeyPressed(49+i))
-			{
+		for (int i{0}; i < 9; i++) {
+			if (IsKeyPressed(49+i)) {
 				model.tryMove(i);
 				return;
 			}
